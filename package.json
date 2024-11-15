@@ -1,0 +1,51 @@
+{
+    "name": "nuxt-app",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "clean": "rm -rf node_modules/",
+        "dev": "nuxt dev",
+        "format": "prettier --write **/*.{js,json,jsx,scss,ts,tsx,vue}",
+        "format-check": "prettier --check \"**/*.{html,js,json,jsx,scss,ts,tsx,vue,scss}\"",
+        "generate": "nuxt generate",
+        "lint": "eslint .",
+        "postinstall": "nuxt prepare",
+        "prepare": "simple-git-hooks",
+        "preview": "nuxt preview",
+        "spell-check": "cspell --no-progress",
+        "type-check": "vue-tsc --noEmit"
+    },
+    "dependencies": {
+        "@nuxt/eslint": "^0.6.1",
+        "@nuxt/image": "^1.8.1",
+        "@nuxtjs/tailwindcss": "^6.12.2",
+        "env-var": "^7.5.0",
+        "nuxt": "^3.14.159",
+        "vue": "latest",
+        "vue-router": "latest"
+    },
+    "devDependencies": {
+        "@antfu/eslint-config": "^3.9.1",
+        "@commitlint/cli": "^19.5.0",
+        "@types/node": "^22.9.0",
+        "cspell": "^8.16.0",
+        "eslint": "^9.14.0",
+        "lint-staged": "^15.2.10",
+        "prettier": "^3.3.3",
+        "prettier-plugin-tailwindcss": "^0.6.8",
+        "simple-git-hooks": "^2.11.1",
+        "tailwindcss-animate": "^1.0.7",
+        "typescript": "^5.6.3",
+        "vue-tsc": "^2.1.10"
+    },
+    "simple-git-hooks": {
+        "commit-msg": "npx commitlint --edit \"$1\"",
+        "pre-commit": "npx lint-staged"
+    },
+    "lint-staged": {
+        "*.{html,js,json,md,scss,ts,vue}": "cspell --no-must-find-files",
+        "*.{html,js,json,scss,ts,vue}": "prettier --check",
+        "*.{js,ts,vue}": "eslint"
+    }
+}

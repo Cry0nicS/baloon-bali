@@ -1,5 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div>Hello world</div>
+    <div>
+        <p>{{ $t("hello.world") }}</p>
+    </div>
 </template>

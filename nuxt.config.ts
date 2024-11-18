@@ -24,12 +24,13 @@ export default defineNuxtConfig({
     },
     // Image module configuration
     image: {
-        format: ["webp", "jpg", "png"],
+        dir: "app/assets/images",
+        format: ["webp"],
         provider: "ipx",
         quality: 80
     },
     // Modules
-    modules: ["@nuxtjs/tailwindcss", "@nuxt/eslint", "@nuxt/image", "@nuxtjs/i18n"],
+    modules: ["@nuxtjs/tailwindcss", "@nuxt/eslint", "@nuxt/image", "@nuxtjs/i18n", "@nuxt/icon"],
     typescript: {
         strict: true,
         typeCheck: true

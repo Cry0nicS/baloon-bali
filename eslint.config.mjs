@@ -10,7 +10,6 @@ export default withNuxt(
             vue: true,
             jsonc: true,
             ignores: [
-                "components/Ui/**",
                 ".coderabbit.yaml",
                 ".github/**",
                 "public/assets/scripts/**"

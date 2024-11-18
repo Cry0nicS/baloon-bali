@@ -12,7 +12,8 @@ const config = {
         "tailwind.config.ts",
         "public/**"
     ],
-    language: "en",
+    language: "en,id",
+    import: ["@cspell/dict-id-id/cspell-ext.json"],
     cache: {
         useCache: true,
         cacheLocation: "node_modules/.cache/cspell"

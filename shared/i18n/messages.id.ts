@@ -3,7 +3,8 @@ export default {
         world: "Hello World - ID"
     },
     logo: {
-        altText: "Alt text"
+        altText:
+            "Logo yang cerah menampilkan pemandangan tropis dengan gunung, pohon kelapa, gerbang candi tradisional, dan sebuah van di jalan berliku."
     },
     language: {
         id: "Bahasa Indonesia",

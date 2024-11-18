@@ -3,7 +3,8 @@ export default {
         world: "Hello World - EN"
     },
     logo: {
-        altText: "Alt text"
+        altText:
+            "A vibrant logo featuring a tropical landscape with a mountain, palm trees, a traditional temple gate, and a van on a winding road."
     },
     language: {
         id: "Indonesian",

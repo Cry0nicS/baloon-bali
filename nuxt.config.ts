@@ -24,7 +24,6 @@ export default defineNuxtConfig({
     },
     // Image module configuration
     image: {
-        dir: "app/assets/images",
         format: ["webp"],
         provider: "ipx",
         quality: 80

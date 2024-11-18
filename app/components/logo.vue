@@ -30,7 +30,7 @@ const localePath = useLocalePath();
             :height="size"
             viewBox="0 0 1024.000000 1024.000000"
             preserveAspectRatio="xMidYMid meet"
-            :aria-label="$t('logo.alt_text')"
+            :aria-label="$t('logo.altText')"
             :class="`fill-${color}`">
             <g
                 transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"

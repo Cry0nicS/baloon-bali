@@ -1,5 +1,5 @@
-import en from "./shared/i18n/messages.en";
-import id from "./shared/i18n/messages.id";
+import en from "#shared/i18n/messages.en";
+import id from "#shared/i18n/messages.id";
 
 export default defineI18nConfig(() => ({
     legacy: false,

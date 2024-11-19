@@ -10,15 +10,17 @@
 
                 <Footer>
                     <template #links>
-                        <LanguageToggle />
-                        <ThemeToggle>
-                            <template #dark-mode>
-                                <span>{{ $t("common.lightMode") }}</span>
-                            </template>
-                            <template #light-mode>
-                                <span>{{ $t("common.darkMode") }}</span>
-                            </template>
-                        </ThemeToggle>
+                        <ClientOnly>
+                            <LanguageToggle />
+                            <ThemeToggle>
+                                <template #dark-mode>
+                                    <span>{{ $t("common.lightMode") }}</span>
+                                </template>
+                                <template #light-mode>
+                                    <span>{{ $t("common.darkMode") }}</span>
+                                </template>
+                            </ThemeToggle>
+                        </ClientOnly>
                     </template>
                 </Footer>
             </div>

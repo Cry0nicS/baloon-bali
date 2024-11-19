@@ -12,6 +12,7 @@ export default withNuxt(
             ignores: [
                 ".coderabbit.yaml",
                 ".github/**",
+                "app/components/ui/**",
                 "public/assets/scripts/**"
             ]
         },

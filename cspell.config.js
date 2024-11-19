@@ -6,11 +6,12 @@ const config = {
     files: ["**/*.{html,js,json,jsx,md,scss,ts,tsx,vue}", "/.*.{ts,tsx,js,jsx,vue}"],
     ignorePaths: [
         "package-lock.json.delete",
+        "app/components/ui/**",
         "assets/",
-        "package.json",
         "nuxt.config.ts",
-        "tailwind.config.ts",
-        "public/**"
+        "package.json",
+        "public/**",
+        "tailwind.config.ts"
     ],
     language: "en,id",
     import: ["@cspell/dict-id-id/cspell-ext.json"],

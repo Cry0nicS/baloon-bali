@@ -1,6 +1,6 @@
 export default {
     hello: {
-        world: "Hello World - EN"
+        world: "Hello World (English)"
     },
     logo: {
         altText:
@@ -8,7 +8,8 @@ export default {
     },
     language: {
         id: "Indonesian",
-        en: "English"
+        en: "English",
+        label: "Beralih ke bahasa Indonesia"
     },
     common: {
         darkMode: "Dark mode",

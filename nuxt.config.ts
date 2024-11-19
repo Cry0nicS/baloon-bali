@@ -5,6 +5,7 @@ export default defineNuxtConfig({
         fallback: "dark",
         preference: "system"
     },
+    css: ["./app/assets/main.css"],
     compatibilityDate: "2024-11-17",
     // Development tools
     devtools: {enabled: true},
@@ -53,6 +54,11 @@ export default defineNuxtConfig({
          * @default "./components/ui"
          */
         componentDir: "./app/components/ui"
+    },
+    tailwindcss: {
+        exposeConfig: true,
+        editorSupport: true,
+        cssPath: ["./app/assets/main.css", {injectPosition: "last"}]
     },
     typescript: {
         strict: true,

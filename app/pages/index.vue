@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div>
+    <section class="w-full px-8 py-12">
         <p>{{ $t("hello.world") }}</p>
-    </div>
+    </section>
 </template>

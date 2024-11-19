@@ -1,6 +1,6 @@
 export default {
     hello: {
-        world: "Hello World - EN"
+        world: "Hello World (English)"
     },
     logo: {
         altText:

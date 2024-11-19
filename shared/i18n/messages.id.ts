@@ -1,6 +1,6 @@
 export default {
     hello: {
-        world: "Hello World - ID"
+        world: "Halo Dunia (Indonesian)"
     },
     logo: {
         altText:

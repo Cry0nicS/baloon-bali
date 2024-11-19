@@ -8,6 +8,7 @@ const switchLocalePath = useSwitchLocalePath();
 <template>
     <nuxt-link
         v-if="locale === LOCALE.English"
+        class="flex h-6 items-center justify-center"
         title="Indonesian"
         :to="switchLocalePath(LOCALE.Indonesian)">
         <slot name="secondary">
@@ -16,6 +17,7 @@ const switchLocalePath = useSwitchLocalePath();
     </nuxt-link>
     <nuxt-link
         v-if="locale === LOCALE.Indonesian"
+        class="flex h-6 items-center justify-center"
         title="English"
         :to="switchLocalePath(LOCALE.English)">
         <slot name="english">

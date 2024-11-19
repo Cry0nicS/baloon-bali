@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    colorMode: {
+        classSuffix: "",
+        fallback: "dark",
+        preference: "system"
+    },
     compatibilityDate: "2024-11-17",
     // Development tools
     devtools: {enabled: true},
@@ -29,7 +34,26 @@ export default defineNuxtConfig({
         quality: 80
     },
     // Modules
-    modules: ["@nuxtjs/tailwindcss", "@nuxt/eslint", "@nuxt/image", "@nuxtjs/i18n", "@nuxt/icon"],
+    modules: [
+        "@nuxtjs/tailwindcss",
+        "@nuxt/eslint",
+        "@nuxt/image",
+        "@nuxtjs/i18n",
+        "@nuxt/icon",
+        "@nuxtjs/color-mode",
+        "shadcn-nuxt"
+    ],
+    shadcn: {
+        /**
+         * Prefix for all the imported component
+         */
+        prefix: "",
+        /**
+         * Directory that the component lives in.
+         * @default "./components/ui"
+         */
+        componentDir: "./app/components/ui"
+    },
     typescript: {
         strict: true,
         typeCheck: true

@@ -1,17 +1,25 @@
 <script setup lang="ts">
 const colorMode = useColorMode();
 
-const logoColor = computed(() => {
-    return colorMode.preference === "dark" ? "#FAFAFA" : "black";
-});
+let logoColor = computed(() => "#FAFAFA");
+
+if (import.meta.client) {
+    logoColor = computed(() => {
+        return colorMode.value === "dark" ? "#FAFAFA" : "black";
+    });
+}
 </script>
 
 <template>
     <div class="flex h-[70px] w-full justify-center border-0">
         <div class="flex w-full items-center justify-between border-b-2 px-8">
-            <ClientOnly>
-                <Logo :color="logoColor" />
-            </ClientOnly>
+            <ColorScheme
+                placeholder="Logo"
+                tag="span">
+                <ClientOnly>
+                    <Logo :color="logoColor" />
+                </ClientOnly>
+            </ColorScheme>
             <div class="flex min-w-[180px] items-center justify-end gap-4">
                 <div class="p-2">
                     <ThemeToggle />

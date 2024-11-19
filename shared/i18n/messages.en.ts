@@ -8,7 +8,8 @@ export default {
     },
     language: {
         id: "Indonesian",
-        en: "English"
+        en: "English",
+        label: "Beralih ke bahasa Indonesia"
     },
     common: {
         darkMode: "Dark mode",

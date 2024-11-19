@@ -8,6 +8,7 @@ const colorMode = useColorMode();
             variant="ghost"
             class="flex h-6 w-auto items-center justify-center p-0 hover:bg-transparent"
             :title="$t('common.toggleTheme')"
+            :aria-pressed="colorMode.preference === 'dark'"
             @click="colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'">
             <span class="sr-only">{{ $t("common.toggleTheme") }}</span>
             <template v-if="colorMode.preference === 'dark'">

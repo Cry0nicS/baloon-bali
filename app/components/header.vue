@@ -12,7 +12,7 @@ const logoColor = computed(() => {
             <ClientOnly>
                 <Logo :color="logoColor" />
             </ClientOnly>
-            <div class="flex min-w-[180px] items-center gap-4">
+            <div class="flex min-w-[180px] items-center justify-end gap-4">
                 <div class="p-2">
                     <ThemeToggle />
                 </div>

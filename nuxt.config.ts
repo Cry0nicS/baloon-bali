@@ -31,7 +31,6 @@ export default defineNuxtConfig({
     // Image module configuration
     image: {
         format: ["webp"],
-        provider: "ipx",
         quality: 80
     },
     // Modules

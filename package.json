@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "build": "nuxt build",
-        "clean": "rm -rf node_modules/",
+        "clean": "rm package-lock.json && rm -rf node_modules/ && npx nuxi cleanup",
         "dev": "nuxt dev",
         "format": "prettier --write **/*.{js,json,jsx,scss,ts,tsx,vue}",
         "format-check": "prettier --check \"**/*.{html,js,json,jsx,scss,ts,tsx,vue,scss}\"",

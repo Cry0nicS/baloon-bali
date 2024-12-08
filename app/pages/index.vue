@@ -16,6 +16,8 @@ const scrollToBooking = () => {
                     src="/assets/images/terrace.webp"
                     alt="Stunning Bali rice terraces at sunrise with morning mist"
                     class="h-full w-full object-cover"
+                    width="1280"
+                    height="592"
                     sizes="sm:100vw md:100vw lg:100vw"
                     format="webp"
                     loading="eager" />
@@ -69,7 +71,7 @@ const scrollToBooking = () => {
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/guide.webp"
-                            alt="Local guide"
+                            alt="Experienced local Bali tour guide sharing knowledge with tourists"
                             class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
                             width="646"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
@@ -84,7 +86,7 @@ const scrollToBooking = () => {
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/car.webp"
-                            alt="Local guide"
+                            alt="Comfortable air-conditioned car for Bali tours"
                             class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
                             width="646"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
@@ -101,7 +103,7 @@ const scrollToBooking = () => {
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/travel.webp"
-                            alt="Local guide"
+                            alt="Customized travel itinerary planning in Bali"
                             class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
                             width="646"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
@@ -119,7 +121,7 @@ const scrollToBooking = () => {
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/tradition.webp"
-                            alt="Local guide"
+                            alt="Traditional Balinese cultural ceremony"
                             class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
                             width="646"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
@@ -181,7 +183,7 @@ const scrollToBooking = () => {
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/freestyle.webp"
-                            alt="Local guide"
+                            alt="Customizable full-day Bali tour experience"
                             class="mb-4 aspect-[1/1] w-full rounded-t-lg object-cover"
                             width="400"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
@@ -208,7 +210,7 @@ const scrollToBooking = () => {
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/full-day.webp"
-                            alt="Local guide"
+                            alt="Eight-hour guided tour of Bali's iconic landmarks"
                             class="mb-4 aspect-[1/1] w-full rounded-t-lg object-cover"
                             width="400"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
@@ -233,7 +235,7 @@ const scrollToBooking = () => {
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/sunset.webp"
-                            alt="Local guide"
+                            alt="Comprehensive twelve-hour Bali tour from sunrise to sunset"
                             class="mb-4 aspect-[1/1] w-full rounded-t-lg object-cover"
                             width="400"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"

@@ -10,24 +10,38 @@ const scrollToBooking = () => {
 <template>
     <div>
         <!-- Hero Section -->
-        <section class="container py-24 sm:py-32">
-            <div class="mx-auto flex max-w-[980px] flex-col items-center gap-4 text-center">
+        <section class="container relative py-24 sm:py-32">
+            <div class="absolute inset-0 z-0">
+                <NuxtImg
+                    src="/assets/images/terrace.webp"
+                    alt="Stunning Bali rice terraces at sunrise with morning mist"
+                    class="h-full w-full object-cover"
+                    width="1280"
+                    height="592"
+                    sizes="sm:100vw md:100vw lg:100vw"
+                    format="webp"
+                    loading="eager" />
+                <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+            <div
+                class="relative z-10 mx-auto flex max-w-[980px] flex-col items-center gap-4 text-center text-white">
                 <h1
                     class="text-3xl font-extrabold leading-tight tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
                     Discover Bali Your Way with a Personal Local Guide
                 </h1>
-                <p class="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
+                <p class="max-w-[700px] text-lg sm:text-xl">
                     Tailor-made itineraries or ready-to-go tours, starting right from your hotel in
                     Ubud.
                 </p>
-                <p class="max-w-[700px] text-muted-foreground">
+                <p class="max-w-[700px]">
                     Experience Bali like never before. Hire a trusted local driver-guide for a full
                     day of personalized exploration, or choose one of our expertly crafted 8-hour or
                     12-hour tour packages to see Bali's most enchanting attractions.
                 </p>
                 <Button
                     size="lg"
-                    @click="scrollToBooking">
+                    @click="scrollToBooking"
+                    class="bg-white text-black hover:bg-gray-200">
                     Book Your Bali Adventure
                 </Button>
             </div>
@@ -52,9 +66,16 @@ const scrollToBooking = () => {
             <h3 class="mb-8 text-center text-2xl font-semibold">
                 Why Choose Our Bali Guide Services?
             </h3>
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
                 <Card>
                     <CardHeader>
+                        <NuxtImg
+                            src="/assets/images/guide.webp"
+                            alt="Experienced local Bali tour guide sharing knowledge with tourists"
+                            class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
+                            width="646"
+                            sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
+                            loading="lazy" />
                         <CardTitle>Local Expertise</CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -63,6 +84,13 @@ const scrollToBooking = () => {
                 </Card>
                 <Card>
                     <CardHeader>
+                        <NuxtImg
+                            src="/assets/images/car.webp"
+                            alt="Comfortable air-conditioned car for Bali tours"
+                            class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
+                            width="646"
+                            sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
+                            loading="lazy" />
                         <CardTitle>Door-to-Door Convenience</CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -73,6 +101,13 @@ const scrollToBooking = () => {
                 </Card>
                 <Card>
                     <CardHeader>
+                        <NuxtImg
+                            src="/assets/images/travel.webp"
+                            alt="Customized travel itinerary planning in Bali"
+                            class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
+                            width="646"
+                            sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
+                            loading="lazy" />
                         <CardTitle>Flexible & Personalized</CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -84,6 +119,13 @@ const scrollToBooking = () => {
                 </Card>
                 <Card>
                     <CardHeader>
+                        <NuxtImg
+                            src="/assets/images/tradition.webp"
+                            alt="Traditional Balinese cultural ceremony"
+                            class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
+                            width="646"
+                            sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
+                            loading="lazy" />
                         <CardTitle>Cultural Immersion</CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -91,71 +133,6 @@ const scrollToBooking = () => {
                             Visit hidden temples, lush rice terraces, and authentic Balinese
                             villages off the tourist trail.
                         </p>
-                    </CardContent>
-                </Card>
-            </div>
-        </section>
-
-        <!-- Features -->
-        <section class="container py-16">
-            <h3 class="mb-8 text-center text-2xl font-semibold">Our Offerings</h3>
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-                <Card>
-                    <CardHeader>
-                        <CardTitle>Personalized Full-Day Tour</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p class="mb-4">
-                            Hire our experienced local guide and driver for a day. You choose where
-                            to go—whether it's temples, waterfalls, beaches, or cultural sites.
-                            Perfect for travelers who know exactly what they want or who prefer
-                            spontaneous exploration.
-                        </p>
-                        <ul class="list-inside list-disc">
-                            <li>Full-day (up to 10 hours) with flexible start time</li>
-                            <li>Private car with air-conditioning</li>
-                            <li>Completely customizable itinerary</li>
-                            <li>Guidance in English</li>
-                            <li>Pickup & drop-off at your Ubud hotel</li>
-                        </ul>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <CardTitle>8-Hour Pre-Set Tour</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p class="mb-4">
-                            A carefully curated 8-hour journey through Bali's iconic landmarks,
-                            ideal for those with limited time who still want a broad taste of the
-                            island.
-                        </p>
-                        <ul class="list-inside list-disc">
-                            <li>Tegalalang Rice Terrace</li>
-                            <li>Tirta Empul Water Temple</li>
-                            <li>Tegenungan Waterfall</li>
-                            <li>Local Lunch Stop (optional)</li>
-                        </ul>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <CardTitle>12-Hour Pre-Set Tour</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p class="mb-4">
-                            A comprehensive 12-hour exploration covering Bali's most renowned spots
-                            as well as hidden gems. Perfect for travelers who want to see as much as
-                            possible in one day.
-                        </p>
-                        <ul class="list-inside list-disc">
-                            <li>Early morning start to catch sunrise at a viewpoint</li>
-                            <li>Besakih Temple (Mother Temple)</li>
-                            <li>Visit to a traditional Balinese home compound</li>
-                            <li>Ulun Danu Beratan Temple</li>
-                            <li>Jatiluwih Rice Terraces (UNESCO site)</li>
-                            <li>Sunset at Tanah Lot Temple (if timing allows)</li>
-                        </ul>
                     </CardContent>
                 </Card>
             </div>
@@ -195,6 +172,92 @@ const scrollToBooking = () => {
                         wonders at your pace.
                     </p>
                 </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="container py-16">
+            <h3 class="mb-8 text-center text-2xl font-semibold">Our Offerings</h3>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <Card>
+                    <CardHeader>
+                        <NuxtImg
+                            src="/assets/images/freestyle.webp"
+                            alt="Customizable full-day Bali tour experience"
+                            class="mb-4 aspect-[1/1] w-full rounded-t-lg object-cover"
+                            width="400"
+                            sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
+                            loading="lazy" />
+                        <CardTitle>Personalized Full-Day Tour</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p class="mb-4">
+                            Hire our experienced local guide and driver for a day. You choose where
+                            to go—whether it's temples, waterfalls, beaches, or cultural sites.
+                            Perfect for travelers who know exactly what they want or who prefer
+                            spontaneous exploration.
+                        </p>
+                        <ul class="list-inside list-disc">
+                            <li>Full-day (up to 10 hours) with flexible start time</li>
+                            <li>Private car with air-conditioning</li>
+                            <li>Completely customizable itinerary</li>
+                            <li>Guidance in English</li>
+                            <li>Pickup & drop-off at your Ubud hotel</li>
+                        </ul>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <NuxtImg
+                            src="/assets/images/full-day.webp"
+                            alt="Eight-hour guided tour of Bali's iconic landmarks"
+                            class="mb-4 aspect-[1/1] w-full rounded-t-lg object-cover"
+                            width="400"
+                            sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
+                            loading="lazy" />
+                        <CardTitle>8-Hour Pre-Set Tour</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p class="mb-4">
+                            A carefully curated 8-hour journey through Bali's iconic landmarks,
+                            ideal for those with limited time who still want a broad taste of the
+                            island.
+                        </p>
+                        <ul class="list-inside list-disc">
+                            <li>Tegalalang Rice Terrace</li>
+                            <li>Tirta Empul Water Temple</li>
+                            <li>Tegenungan Waterfall</li>
+                            <li>Local Lunch Stop (optional)</li>
+                        </ul>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <NuxtImg
+                            src="/assets/images/sunset.webp"
+                            alt="Comprehensive twelve-hour Bali tour from sunrise to sunset"
+                            class="mb-4 aspect-[1/1] w-full rounded-t-lg object-cover"
+                            width="400"
+                            sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
+                            loading="lazy" />
+                        <CardTitle>12-Hour Pre-Set Tour</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p class="mb-4">
+                            A comprehensive 12-hour exploration covering Bali's most renowned spots
+                            as well as hidden gems. Perfect for travelers who want to see as much as
+                            possible in one day.
+                        </p>
+                        <ul class="list-inside list-disc">
+                            <li>Early morning start to catch sunrise at a viewpoint</li>
+                            <li>Besakih Temple (Mother Temple)</li>
+                            <li>Visit to a traditional Balinese home compound</li>
+                            <li>Ulun Danu Beratan Temple</li>
+                            <li>Jatiluwih Rice Terraces (UNESCO site)</li>
+                            <li>Sunset at Tanah Lot Temple (if timing allows)</li>
+                        </ul>
+                    </CardContent>
+                </Card>
             </div>
         </section>
 

@@ -40,8 +40,8 @@ const scrollToBooking = () => {
                 </p>
                 <Button
                     size="lg"
-                    @click="scrollToBooking"
-                    class="bg-white text-black hover:bg-gray-200">
+                    class="bg-white text-black hover:bg-gray-200"
+                    @click="scrollToBooking">
                     Book Your Bali Adventure
                 </Button>
             </div>
@@ -314,7 +314,16 @@ const scrollToBooking = () => {
                 experiences fill up fast. Book now to ensure your Bali adventure is everything
                 you've dreamed.
             </p>
-            <Button size="lg">Book Your Tour Now</Button>
+            <Button as-child>
+                <NuxtLink
+                    to="https://wa.me/628563850892?text=Hi%2C+I+am+interested+in+booking+a+tour+with+you+for+Bali"
+                    target="_blank">
+                    <Icon
+                        name="ic:baseline-whatsapp"
+                        size="md" />
+                    Book Your Tour Now
+                </NuxtLink>
+            </Button>
         </section>
 
         <!-- FAQs -->

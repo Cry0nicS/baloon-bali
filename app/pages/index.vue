@@ -14,7 +14,7 @@ const scrollToBooking = () => {
             <div class="absolute inset-0 z-0">
                 <NuxtImg
                     src="/assets/images/terrace.webp"
-                    alt="Stunning Bali rice terraces at sunrise with morning mist"
+                    :alt="$t('hero.alt')"
                     class="h-full w-full object-cover"
                     width="1280"
                     height="592"
@@ -27,112 +27,92 @@ const scrollToBooking = () => {
                 class="relative z-10 mx-auto flex max-w-[980px] flex-col items-center gap-4 text-center text-white">
                 <h1
                     class="text-3xl font-extrabold leading-tight tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-                    Discover Bali Your Way with a Personal Local Guide
+                    {{ $t("hero.title") }}
                 </h1>
-                <p class="max-w-[700px] text-lg sm:text-xl">
-                    Tailor-made itineraries or ready-to-go tours, starting right from your hotel in
-                    Ubud.
-                </p>
-                <p class="max-w-[700px]">
-                    Experience Bali like never before. Hire a trusted local driver-guide for a full
-                    day of personalized exploration, or choose one of our expertly crafted 8-hour or
-                    12-hour tour packages to see Bali's most enchanting attractions.
-                </p>
+                <p class="max-w-[700px] text-lg sm:text-xl">{{ $t("hero.description1") }}</p>
+                <p class="max-w-[700px]">{{ $t("hero.description2") }}</p>
                 <Button
                     size="lg"
                     class="bg-white text-black hover:bg-gray-200"
                     @click="scrollToBooking">
-                    Book Your Bali Adventure
+                    {{ $t("hero.button") }}
                 </Button>
             </div>
         </section>
 
         <!-- Social Proof -->
         <section class="container py-8 text-center">
-            <h3 class="mb-4 text-2xl font-semibold">Trusted By Travelers Worldwide</h3>
+            <h3 class="mb-4 text-2xl font-semibold">{{ $t("socialProof.title") }}</h3>
             <div class="mb-4 flex flex-wrap justify-center gap-4">
-                <Badge variant="secondary">Over 500 successful tours since 2015</Badge>
-                <Badge variant="secondary">Highly rated on TripAdvisor and Google Reviews</Badge>
-                <Badge variant="secondary">4.9/5 Average Rating from 200+ Guests</Badge>
+                <Badge variant="secondary">{{ $t("socialProof.badges.tours") }}</Badge>
+                <Badge variant="secondary">{{ $t("socialProof.badges.ratings") }}</Badge>
+                <Badge variant="secondary">{{ $t("socialProof.badges.average") }}</Badge>
             </div>
-            <p class="italic">
-                "Our Bali experience was unforgettable thanks to this guide's insider knowledge." –
-                Rebecca G.
-            </p>
+            <p class="italic">{{ $t("socialProof.testimonial") }}</p>
         </section>
 
         <!-- Benefits -->
         <section class="container py-16">
-            <h3 class="mb-8 text-center text-2xl font-semibold">
-                Why Choose Our Bali Guide Services?
-            </h3>
+            <h3 class="mb-8 text-center text-2xl font-semibold">{{ $t("benefits.title") }}</h3>
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
                 <Card>
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/guide.webp"
-                            alt="Experienced local Bali tour guide sharing knowledge with tourists"
+                            :alt="$t('benefits.localExpertise.alt')"
                             class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
                             width="646"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
                             loading="lazy" />
-                        <CardTitle>Local Expertise</CardTitle>
+                        <CardTitle>{{ $t("benefits.localExpertise.title") }}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>Get insider tips and local stories you won't find in guidebooks.</p>
+                        <p>{{ $t("benefits.localExpertise.description") }}</p>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/car.webp"
-                            alt="Comfortable air-conditioned car for Bali tours"
+                            :alt="$t('benefits.convenience.alt')"
                             class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
                             width="646"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
                             loading="lazy" />
-                        <CardTitle>Door-to-Door Convenience</CardTitle>
+                        <CardTitle>{{ $t("benefits.convenience.title") }}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>
-                            Pickup and drop-off directly at your Ubud hotel for a stress-free day.
-                        </p>
+                        <p>{{ $t("benefits.convenience.description") }}</p>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/travel.webp"
-                            alt="Customized travel itinerary planning in Bali"
+                            :alt="$t('benefits.flexibility.alt')"
                             class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
                             width="646"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
                             loading="lazy" />
-                        <CardTitle>Flexible & Personalized</CardTitle>
+                        <CardTitle>{{ $t("benefits.flexibility.title") }}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>
-                            Create your own itinerary or trust our recommended routes to maximize
-                            your time.
-                        </p>
+                        <p>{{ $t("benefits.flexibility.description") }}</p>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/tradition.webp"
-                            alt="Traditional Balinese cultural ceremony"
+                            :alt="$t('benefits.immersion.alt')"
                             class="mb-4 aspect-[3/2] w-full rounded-t-lg object-cover"
                             width="646"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
                             loading="lazy" />
-                        <CardTitle>Cultural Immersion</CardTitle>
+                        <CardTitle>{{ $t("benefits.immersion.title") }}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>
-                            Visit hidden temples, lush rice terraces, and authentic Balinese
-                            villages off the tourist trail.
-                        </p>
+                        <p>{{ $t("benefits.immersion.description") }}</p>
                     </CardContent>
                 </Card>
             </div>
@@ -140,69 +120,60 @@ const scrollToBooking = () => {
 
         <!-- How It Works -->
         <section class="container py-16">
-            <h3 class="mb-8 text-center text-2xl font-semibold">How It Works</h3>
+            <h3 class="mb-8 text-center text-2xl font-semibold">{{ $t("howItWorks.title") }}</h3>
             <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
                 <div class="flex flex-col items-center text-center">
                     <div
                         class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
                         1
                     </div>
-                    <h4 class="mb-2 font-semibold">Select Your Experience</h4>
-                    <p>Pick the personalized tour or one of our 8-hour or 12-hour itineraries.</p>
+                    <h4 class="mb-2 font-semibold">{{ $t("howItWorks.steps.step1.title") }}</h4>
+                    <p>{{ $t("howItWorks.steps.step1.description") }}</p>
                 </div>
                 <div class="flex flex-col items-center text-center">
                     <div
                         class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
                         2
                     </div>
-                    <h4 class="mb-2 font-semibold">Book Online</h4>
-                    <p>
-                        Choose your date, confirm pickup location, and complete a quick, secure
-                        booking form.
-                    </p>
+                    <h4 class="mb-2 font-semibold">{{ $t("howItWorks.steps.step2.title") }}</h4>
+                    <p>{{ $t("howItWorks.steps.step2.description") }}</p>
                 </div>
                 <div class="flex flex-col items-center text-center">
                     <div
                         class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
                         3
                     </div>
-                    <h4 class="mb-2 font-semibold">Explore & Enjoy</h4>
-                    <p>
-                        Our local guide picks you up at your Ubud hotel. Relax and discover Bali's
-                        wonders at your pace.
-                    </p>
+                    <h4 class="mb-2 font-semibold">{{ $t("howItWorks.steps.step3.title") }}</h4>
+                    <p>{{ $t("howItWorks.steps.step3.description") }}</p>
                 </div>
             </div>
         </section>
 
         <!-- Features -->
         <section class="container py-16">
-            <h3 class="mb-8 text-center text-2xl font-semibold">Our Offerings</h3>
+            <h3 class="mb-8 text-center text-2xl font-semibold">{{ $t("offerings.title") }}</h3>
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <Card>
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/freestyle.webp"
-                            alt="Customizable full-day Bali tour experience"
+                            :alt="$t('offerings.tours.personalized.title')"
                             class="mb-4 aspect-[1/1] w-full rounded-t-lg object-cover"
                             width="400"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
                             loading="lazy" />
-                        <CardTitle>Personalized Full-Day Tour</CardTitle>
+                        <CardTitle>{{ $t("offerings.tours.personalized.title") }}</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p class="mb-4">
-                            Hire our experienced local guide and driver for a day. You choose where
-                            to go—whether it's temples, waterfalls, beaches, or cultural sites.
-                            Perfect for travelers who know exactly what they want or who prefer
-                            spontaneous exploration.
+                            {{ $t("offerings.tours.personalized.description") }}
                         </p>
                         <ul class="list-inside list-disc">
-                            <li>Full-day (up to 10 hours) with flexible start time</li>
-                            <li>Private car with air-conditioning</li>
-                            <li>Completely customizable itinerary</li>
-                            <li>Guidance in English</li>
-                            <li>Pickup & drop-off at your Ubud hotel</li>
+                            <li>{{ $t("offerings.tours.personalized.features[0]") }}</li>
+                            <li>{{ $t("offerings.tours.personalized.features[1]") }}</li>
+                            <li>{{ $t("offerings.tours.personalized.features[2]") }}</li>
+                            <li>{{ $t("offerings.tours.personalized.features[3]") }}</li>
+                            <li>{{ $t("offerings.tours.personalized.features[4]") }}</li>
                         </ul>
                     </CardContent>
                 </Card>
@@ -210,24 +181,22 @@ const scrollToBooking = () => {
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/full-day.webp"
-                            alt="Eight-hour guided tour of Bali's iconic landmarks"
+                            :alt="$t('offerings.tours.eightHour.title')"
                             class="mb-4 aspect-[1/1] w-full rounded-t-lg object-cover"
                             width="400"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
                             loading="lazy" />
-                        <CardTitle>8-Hour Pre-Set Tour</CardTitle>
+                        <CardTitle>{{ $t("offerings.tours.eightHour.title") }}</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p class="mb-4">
-                            A carefully curated 8-hour journey through Bali's iconic landmarks,
-                            ideal for those with limited time who still want a broad taste of the
-                            island.
+                            {{ $t("offerings.tours.eightHour.description") }}
                         </p>
                         <ul class="list-inside list-disc">
-                            <li>Tegalalang Rice Terrace</li>
-                            <li>Tirta Empul Water Temple</li>
-                            <li>Tegenungan Waterfall</li>
-                            <li>Local Lunch Stop (optional)</li>
+                            <li>{{ $t("offerings.tours.eightHour.features[0]") }}</li>
+                            <li>{{ $t("offerings.tours.eightHour.features[1]") }}</li>
+                            <li>{{ $t("offerings.tours.eightHour.features[2]") }}</li>
+                            <li>{{ $t("offerings.tours.eightHour.features[3]") }}</li>
                         </ul>
                     </CardContent>
                 </Card>
@@ -235,26 +204,24 @@ const scrollToBooking = () => {
                     <CardHeader>
                         <NuxtImg
                             src="/assets/images/sunset.webp"
-                            alt="Comprehensive twelve-hour Bali tour from sunrise to sunset"
+                            :alt="$t('offerings.tours.twelveHour.title')"
                             class="mb-4 aspect-[1/1] w-full rounded-t-lg object-cover"
                             width="400"
                             sizes="(min-width: 1024px) 230px, (min-width: 768px) 413px, 646px"
                             loading="lazy" />
-                        <CardTitle>12-Hour Pre-Set Tour</CardTitle>
+                        <CardTitle>{{ $t("offerings.tours.twelveHour.title") }}</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p class="mb-4">
-                            A comprehensive 12-hour exploration covering Bali's most renowned spots
-                            as well as hidden gems. Perfect for travelers who want to see as much as
-                            possible in one day.
+                            {{ $t("offerings.tours.twelveHour.description") }}
                         </p>
                         <ul class="list-inside list-disc">
-                            <li>Early morning start to catch sunrise at a viewpoint</li>
-                            <li>Besakih Temple (Mother Temple)</li>
-                            <li>Visit to a traditional Balinese home compound</li>
-                            <li>Ulun Danu Beratan Temple</li>
-                            <li>Jatiluwih Rice Terraces (UNESCO site)</li>
-                            <li>Sunset at Tanah Lot Temple (if timing allows)</li>
+                            <li>{{ $t("offerings.tours.twelveHour.features[0]") }}</li>
+                            <li>{{ $t("offerings.tours.twelveHour.features[1]") }}</li>
+                            <li>{{ $t("offerings.tours.twelveHour.features[2]") }}</li>
+                            <li>{{ $t("offerings.tours.twelveHour.features[3]") }}</li>
+                            <li>{{ $t("offerings.tours.twelveHour.features[4]") }}</li>
+                            <li>{{ $t("offerings.tours.twelveHour.features[5]") }}</li>
                         </ul>
                     </CardContent>
                 </Card>
@@ -263,42 +230,30 @@ const scrollToBooking = () => {
 
         <!-- Testimonials -->
         <section class="container py-16">
-            <h3 class="mb-8 text-center text-2xl font-semibold">What Our Guests Are Saying</h3>
+            <h3 class="mb-8 text-center text-2xl font-semibold">{{ $t("testimonials.title") }}</h3>
             <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
                 <Card>
                     <CardHeader>
-                        <CardTitle>Sarah L. (USA)</CardTitle>
+                        <CardTitle>{{ $t("testimonials.reviews.sarah.name") }}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>
-                            "Our guide was phenomenal. He took us to hidden waterfalls I'd never
-                            heard of and gave us the cultural context behind everything we saw. Best
-                            day in Bali!"
-                        </p>
+                        <p>"{{ $t("testimonials.reviews.sarah.feedback") }}"</p>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle>Mark T. (UK)</CardTitle>
+                        <CardTitle>{{ $t("testimonials.reviews.mark.name") }}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>
-                            "The 8-hour tour was perfect. We saw temples, rice terraces, and even
-                            had time for a traditional dance performance. The convenience of pickup
-                            and drop-off made it so easy."
-                        </p>
+                        <p>"{{ $t("testimonials.reviews.mark.feedback") }}"</p>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader>
-                        <CardTitle>Andrea & Carlos (Spain)</CardTitle>
+                        <CardTitle>{{ $t("testimonials.reviews.andrea.name") }}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>
-                            "We wanted a custom itinerary focusing on local art and crafts. Our
-                            guide knew exactly where to go. We ended up visiting artisan workshops
-                            and chatting with the artists themselves. Unforgettable!"
-                        </p>
+                        <p>"{{ $t("testimonials.reviews.andrea.feedback") }}"</p>
                     </CardContent>
                 </Card>
             </div>
@@ -308,12 +263,8 @@ const scrollToBooking = () => {
         <section
             id="booking"
             class="container py-16 text-center">
-            <h3 class="mb-4 text-2xl font-semibold">Ready to Explore Bali?</h3>
-            <p class="mx-auto mb-8 max-w-2xl">
-                Secure your spot today. Our guide's availability is limited, and these private
-                experiences fill up fast. Book now to ensure your Bali adventure is everything
-                you've dreamed.
-            </p>
+            <h3 class="mb-4 text-2xl font-semibold">{{ $t("callToAction.title") }}</h3>
+            <p class="mx-auto mb-8 max-w-2xl">{{ $t("callToAction.description") }}</p>
             <Button as-child>
                 <NuxtLink
                     to="https://wa.me/628563850892?text=Hi%2C+I+am+interested+in+booking+a+tour+with+you+for+Bali"
@@ -321,59 +272,41 @@ const scrollToBooking = () => {
                     <Icon
                         name="ic:baseline-whatsapp"
                         size="md" />
-                    Book Your Tour Now
+                    {{ $t("callToAction.button") }}
                 </NuxtLink>
             </Button>
         </section>
 
         <!-- FAQs -->
         <section class="container py-16">
-            <h3 class="mb-8 text-center text-2xl font-semibold">Frequently Asked Questions</h3>
+            <h3 class="mb-8 text-center text-2xl font-semibold">{{ $t("faqs.title") }}</h3>
             <Accordion
                 type="single"
                 collapsible
                 class="w-full">
                 <AccordionItem value="item-1">
-                    <AccordionTrigger>What's included in the tour price?</AccordionTrigger>
-                    <AccordionContent>
-                        The price includes your private guide, transportation in an air-conditioned
-                        car, fuel, parking fees, and pickup/drop-off at your Ubud hotel. Meals,
-                        entrance fees, and personal expenses are not included unless otherwise
-                        stated.
-                    </AccordionContent>
+                    <AccordionTrigger>
+                        {{ $t("faqs.questions.included.question") }}
+                    </AccordionTrigger>
+                    <AccordionContent>{{ $t("faqs.questions.included.answer") }}</AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                    <AccordionTrigger>How do I customize my personalized tour?</AccordionTrigger>
-                    <AccordionContent>
-                        After booking, you'll receive an email prompting you to share your preferred
-                        destinations or experiences. Our guide will then finalize the itinerary with
-                        you.
-                    </AccordionContent>
+                    <AccordionTrigger>
+                        {{ $t("faqs.questions.customize.question") }}
+                    </AccordionTrigger>
+                    <AccordionContent>{{ $t("faqs.questions.customize.answer") }}</AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
-                    <AccordionTrigger>Can I cancel or reschedule my tour?</AccordionTrigger>
-                    <AccordionContent>
-                        Yes. We offer free cancellation up to 48 hours before the scheduled tour.
-                        You can also reschedule subject to availability. Please refer to our
-                        detailed cancellation policy on the booking page.
-                    </AccordionContent>
+                    <AccordionTrigger>{{ $t("faqs.questions.cancel.question") }}</AccordionTrigger>
+                    <AccordionContent>{{ $t("faqs.questions.cancel.answer") }}</AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
-                    <AccordionTrigger>
-                        Are the tours suitable for families with children?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                        Absolutely. Our guide is experienced with guests of all ages and can tailor
-                        the itinerary to be child-friendly.
-                    </AccordionContent>
+                    <AccordionTrigger>{{ $t("faqs.questions.family.question") }}</AccordionTrigger>
+                    <AccordionContent>{{ $t("faqs.questions.family.answer") }}</AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-5">
-                    <AccordionTrigger>What should I bring on the tour?</AccordionTrigger>
-                    <AccordionContent>
-                        Comfortable clothing, sunscreen, a hat, and a camera are recommended. If you
-                        plan on visiting temples, bring clothing that covers your knees and
-                        shoulders.
-                    </AccordionContent>
+                    <AccordionTrigger>{{ $t("faqs.questions.bring.question") }}</AccordionTrigger>
+                    <AccordionContent>{{ $t("faqs.questions.bring.answer") }}</AccordionContent>
                 </AccordionItem>
             </Accordion>
         </section>
